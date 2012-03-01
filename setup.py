@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(name='Splango',
       version='0.1',
@@ -8,5 +8,6 @@ setup(name='Splango',
       author='Shimon Rura',
       author_email='shimon@rura.org',
       url='http://github.com/shimon/Splango',
-      packages=['splango','splango.templatetags'],
-      )
+      packages=find_packages(),
+      include_package_data=True,
+)
